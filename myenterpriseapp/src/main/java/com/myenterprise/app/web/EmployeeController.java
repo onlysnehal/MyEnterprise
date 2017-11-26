@@ -13,7 +13,7 @@ import com.myenterprise.app.model.Employee;
 import com.myenterprise.app.service.EmployeeService;
 
 @RestController
-@RequestMapping(value="/api/employee")
+@RequestMapping(value="/employee")
 public class EmployeeController {
 
 	@Autowired
