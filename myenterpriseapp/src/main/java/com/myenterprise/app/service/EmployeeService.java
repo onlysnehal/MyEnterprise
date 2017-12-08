@@ -4,9 +4,7 @@ import java.util.List;
 
 import com.myenterprise.app.model.Employee;
 
-public interface EmployeeService {
-	
+public interface EmployeeService {	
 	public void addEmployee(Employee emp);
 	public List<Employee>getAllEmployees();
-
 }

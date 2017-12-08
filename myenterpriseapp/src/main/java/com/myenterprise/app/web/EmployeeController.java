@@ -13,17 +13,19 @@ import com.myenterprise.app.model.Employee;
 import com.myenterprise.app.service.EmployeeService;
 
 @RestController
-@RequestMapping(value="/employee")
+@RequestMapping(value = "/employee")
 public class EmployeeController {
 
 	@Autowired
 	private EmployeeService employeeService;
 
-	@RequestMapping(value = "/add", method = RequestMethod.POST,consumes = {MediaType.APPLICATION_JSON_VALUE})
+	@RequestMapping(value = "/add", method = RequestMethod.POST, consumes = { MediaType.APPLICATION_JSON_VALUE })
 	public void addEmployee(@RequestBody Employee employee) {
-		employeeService.addEmployee(employee);
+		if (null != employee) {
+			employeeService.addEmployee(employee);
+		}
 	}
-	
+
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public List<Employee> getAllEmployees() {
 		return employeeService.getAllEmployees();

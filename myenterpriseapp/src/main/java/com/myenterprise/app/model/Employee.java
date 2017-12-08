@@ -13,6 +13,8 @@ public class Employee {
 	private String middleName;
 	private String lastName;
 	private Date birthDate;
+	private String gender;
+	private int age;
 	
 	private Address address;
 	
@@ -64,6 +66,23 @@ public class Employee {
 
 	public void setWork(Work work) {
 		this.work = work;
-	}	
+	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}	
+	
+	
 }
